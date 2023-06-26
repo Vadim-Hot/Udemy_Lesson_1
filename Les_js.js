@@ -21,8 +21,8 @@ const personalMovieDB = {
 
 function questionFilm() {
   for (let i = 0; i < 2; i++) {
-    const a = prompt("Один из последних просмотренных фильмов?", "");
-    b = prompt("На сколько цените его?", "");
+    const a = prompt("Один из последних просмотренных фильмов?", "").trim();
+          b = prompt("На сколько цените его?", "");
 
     if (a != "" && b != "" && a != null && b != null && a.length < 50) {
       personalMovieDB.movies[a] = b;
@@ -51,7 +51,7 @@ function showMyDb(hidden){  //  проверяем personalMovieDB.private на 
         console.log(personalMovieDB);
     }
 }
-//showMyDb(personalMovieDB.private);
+showMyDb(personalMovieDB.private);
 
 function writeYourGenres(){
     for(let i = 1; i <= 3; i++){
